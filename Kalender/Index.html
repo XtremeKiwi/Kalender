@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kalender</title>
+</head>
+
+<body>
+<div class="kalender-limiter">
+
+<div class="kalender-forEach"></div>
+
+<div class="kalender-container">
+
+    <section class="event-and-date">
+        <h2>Event name</h2>
+        <h3>Date: 1/1/2026</h3>
+    </section>
+
+    <section class="event-content">
+        <img src="img/Picture2.png" alt="" class="event-image">
+        <article class="event-description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti id ipsa omnis provident, quas quasi reiciendis repellendus unde veniam! Earum?</article>
+    </section>
+    <section class="event-content">
+        <p class="event-recommendation"><strong>Vi foreslår:</strong> Glidekreme, Læderpolering, Halsbånd, Puppymaske</p>
+        <a href="https://www.youtube.com/watch?v=jfKfPfyJRdk"><button class="event-button" >Se event</button></a>
+    </section>
+</div>
+</div>
+
+</body>
+
+<script>
+
+const kalenderPiece = [
+    {
+        name: 'test',
+        date: '1/2/1999',
+        description: 'lorem',
+        recommendation: 'Test, Salmiak, Tirebalsam',
+
+        link: 'https://www.w3schools.com/cssref/css3_pr_justify-content.php' ,
+
+        img: 'img/Picture2.png',
+        alt: 'Homoware logo'
+    }
+];
+
+let kalenderHTML = '';
+kalenderPiece.forEach((piece) => {
+    kalenderHTML += `
+<div class="kalender-container">
+
+    <section class="event-and-date">
+        <h2>${piece.name}</h2>
+        <h3>Dato: ${piece.date}</h3>
+    </section>
+
+    <section class="event-content">
+        <img src="${piece.img}" alt="${piece.alt}" class="event-image">
+        <article class="event-description">${piece.description}</article>
+    </section>
+    <section class="event-content">
+        <p class="event-recommendation"><strong>Vi foreslår: </strong>${piece.recommendation}</p>
+        <a target="_blank" href="${piece.link}"><button class="event-button">Se event</button></a>
+    </section>
+</div>
+`});
+
+
+document.querySelector(".kalender-forEach").innerHTML = kalenderHTML;
+
+
+</script>
+
+
+
+<style>
+*{
+    margin: 0;
+    text-decoration: none;
+    font-family: Roboto;
+    color: var(--white)
+}
+
+:root{
+    --primary-orange: #FF9900;
+    --secondary-orange: #FFAE00;
+    --primary-gray: #222222;
+    --secondary-gray: #333333;
+    --tertiary-grey: #555555;
+    --white: #f0f0f0;
+}
+
+body{
+    padding: 0 2rem;
+}
+
+.kalender-limiter{
+    overflow: scroll;
+    height: 400px;
+}
+
+.kalender-container{
+    margin: auto;
+    margin-bottom: 8px;
+    height: auto;
+    width: auto;
+    padding: 1rem;
+    background-color: var(--primary-gray);
+}
+
+.event-and-date{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    letter-spacing: 2px;
+}
+
+.event-content{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 1rem;
+    justify-content: space-between;
+}
+
+.event-image{
+    width: 8rem;
+}
+
+.event-recommendation{
+    font-size: 14px;
+}
+
+.event-button{
+    background-color: var(--primary-orange);
+    border-style: none;
+    padding: 0.8rem;
+    margin-right: 1rem;
+    font-size: 1rem;
+    display: flex;
+    transition: 0.2s;
+    color: var(--primary-gray)
+}
+
+.event-button:hover{
+    cursor: pointer;
+    transform: scale(1.2)
+
+}
+</style>
+</html>
