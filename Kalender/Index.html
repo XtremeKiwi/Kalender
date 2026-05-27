@@ -8,55 +8,131 @@
     <title>Kalender</title>
 </head>
 
+
+
 <body>
+
 <div class="kalender-limiter">
-
-<div class="kalender-forEach"></div>
-
-<div class="kalender-container">
-
-    <section class="event-and-date">
-        <h2>Event name</h2>
-        <h3>Date: 1/1/2026</h3>
-    </section>
-
-    <section class="event-content">
-        <img src="img/Picture2.png" alt="" class="event-image">
-        <article class="event-description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti id ipsa omnis provident, quas quasi reiciendis repellendus unde veniam! Earum?</article>
-    </section>
-    <section class="event-content">
-        <p class="event-recommendation"><strong>Vi foreslår:</strong> Glidekreme, Læderpolering, Halsbånd, Puppymaske</p>
-        <a href="https://www.youtube.com/watch?v=jfKfPfyJRdk"><button class="event-button" >Se event</button></a>
-    </section>
-</div>
+    <div class="kalender-forEach"></div>
 </div>
 
 </body>
 
+
+
 <script>
 
-const kalenderPiece = [
-    {
-        name: 'test',
-        date: '1/2/1999',
-        description: 'lorem',
-        recommendation: 'Test, Salmiak, Tirebalsam',
+    /* Dataen til ForEach loopet */
+    const kalenderPiece = [
+        {
+            name: 'Copenhagen Thursday Night Munch',
+            date: '21/5/2026',
+            place: 'Pulp bar, 3 Sankt Hans Torv',
+            description: 'En munch er en social og afslappet mødested for folk, der er interesseret i kink og BDSM. Det foregår oftest på et offentligt sted som en bar, cafe, restaurant eller lignende.\n' +
+                'Munch er en mulighed for at møde ligesindede i afslappede omstændigheder. Til en munch er der plads til at dele erfaringer, stille spørgsmål, eller en ikke-kink relateret snak.',
+            recommendation: 'Kom i hverdagstøj, eventet foregår i det offentlige rum hvor fokus er på at møde andre.',
 
-        link: 'https://www.w3schools.com/cssref/css3_pr_justify-content.php' ,
+            link: 'https://fetlife.com/events/2026/05/21/copenhagen-thursday-night-munch-may-rwl4tt?source=events_near_me' ,
 
-        img: 'img/Picture2.png',
-        alt: 'Homoware logo'
-    }
-];
+            img: 'http://homowarelandingpage.local/wp-content/uploads/2026/04/cropped-Picture2.png',
+            alt: 'Homoware logo'
+        },
+        {
+            name: 'Manifest, HEELS, BOOTS COLLARS & CORSETS',
+            date: '30/5/2026',
+            place: 'TBA',
+            description: 'This is the Last Dance Before Summer. One more night to step into your heels or lace up your boots before we go into summer vacation mode. One more chance to leave a mark that lingers. Let\'s make it count together!\n' +
+                '\n' +
+                'We set the frame. You decide how tight it fits.\n' +
+                '\n' +
+                'See you in your Heels, Boots, Collars & Corsets on the floor!',
+            recommendation: 'Til Manifest er det forventet at man har gjort meget ud af sit udseenende, læs deres retningnslinjer på deres hjemmeside da man kan blive afvist ved døren.',
 
-let kalenderHTML = '';
-kalenderPiece.forEach((piece) => {
-    kalenderHTML += `
+            link: 'https://manifest.dk/' ,
+
+            img: 'http://homowarelandingpage.local/wp-content/uploads/2026/05/ManiFest_Logo_WHITE_pictos_only-ec736119.png',
+            alt: 'Manifest logo'
+        },
+        {
+            name: 'June Boardgame Munch',
+            date: '4/6/2026',
+            place: 'TBA',
+            description: 'Copenhagen board game munch er munchen for alle kinky brætspilsentusiaster, der har lyst til at mødes med ligesindede under hyggelige og afslappede forhold. Vi mødes på Bastard Café, der er byens største brætspilscafé med brætspil for alle i alle kategorier.',
+            recommendation: 'Kom i hverdagstøj, eventet foregår i det offentlige rum hvor fokus er på at møde andre.',
+
+            link: 'https://billetto.dk/en/e/june-boardgame-munch-billetter-1923494?utm_source=organiser&utm_medium=share&utm_campaign=copy_link&utm_content=1923494' ,
+
+            img: 'http://homowarelandingpage.local/wp-content/uploads/2026/04/cropped-Picture2.png',
+            alt: 'Homoware logo'
+        },
+        {
+            name: 'ManiMunch | Community & Cocktails',
+            date: '4/6/2026',
+            place: '\n' +
+                '\n' +
+                'Zeppelin Bar\n' +
+                '\n' +
+                '45 Vesterbrogade\n' +
+                'Copenhagen, Capital Region of Denmark,',
+            description: 'Not everything needs latex, leather, or lacing up tight. Sometimes all it takes is a drink, a grin, and a shared understanding.\n' +
+                'ManiMunch is a relaxed social meetup for kinksters, fetishists, and curious minds of all experience levels.\n' +
+                '\n' +
+                'Think munch vibes rather than dungeon energy.\n' +
+                '\n' +
+                'A place to talk, laugh, flirt, connect, and ease into the ManiFest universe - without committing to a full-scale party (or a full-scale catsuit).\n' +
+                '\n' +
+                'All genders, identities & experience levels welcome.\n' +
+                'No speeches. No schedules. Just good company.',
+            recommendation: 'Kom i hverdagstøj, eventet foregår i det offentlige rum hvor fokus er på at møde andre.',
+
+            link: 'https://manifest.dk/manimunch' ,
+
+            img: 'http://homowarelandingpage.local/wp-content/uploads/2026/05/ManiFest_Logo_WHITE_pictos_only-ec736119.png',
+            alt: 'Manifest logo'
+        },
+        {
+            name: 'SMug Hygge Night [open event]',
+            date: '6/6/2026',
+            place: ' Smil\n' +
+                '\n' +
+                'Skjulhøj Alle 57A, 2720 Vanløse\n' +
+                'Copenhagen, Capital Region of Denmark',
+            description: 'It\'s that time again! SMug is inviting you for another “Hygge” night in SMil, where you can come by to meet and socialize with Copenhagen’s kink youth. The play areas will be open for kinky activities, or you can relax in the lounge and chat with other kinksters about anything and everything. You must be 18-35 years or, if older, attend as a partner of someone that age. If you want to bring a guest older than the age bracket, do write to us beforehand, or you will not be let in. We will be checking ID at the door. This is an open event, which means you can join even if you are not a member of SMil.',
+            recommendation: 'SMil er relativt afslappet når det kommer til ens påklædning, men det bliver værdsat at man gør noget ud af sit udseenende, specielt med fetish påklædning',
+
+            link: 'https://smilkbh.dk/sm12/Begivenhed/hh-smug-cozy-night-3/?instance_id=26152' ,
+
+            img: 'http://homowarelandingpage.local/wp-content/uploads/2026/05/SMil-78x78-1.jpg',
+            alt: 'SMil logo'
+        },
+        {
+            name: 'SOAKED - queer dungeon party',
+            date: '2/7/2026',
+            place: 'TBA',
+            description: 'This evening will have a focus on play, but of course it is also welcome to just come to socialize if you prefer that. The bar area is usually less play focused. We will facilitate some activities in the beginning of the party to make it easier to connect with others. We start this off with a “welcome to the party”-presentation after the door is closed. More info will be sent out to ticket holders about other organized activities.\n' +
+                '\n' +
+                'We will have a bar area (no alcohol) with affordable prices, it’s not allowed to bring your own drinks.\n' +
+                'We will also provide some snacks but there will NOT be any food for sale, so please keep this in mind and eat dinner before you come to be able to have fun all night!',
+            recommendation: 'Til Soaked er der ikke helt store forventinger for det vilde udstyr, kom i hvad du føler dig komfortable i.',
+
+            link: 'https://fetlife.com/events/2026/07/02/soaked-queer-dungeon-party-rr7zom?source=events_near_me' ,
+
+            img: 'http://homowarelandingpage.local/wp-content/uploads/2026/05/BDSM_logo.svg-scaled.png',
+            alt: 'Triskelion logo'
+        }
+    ];
+
+    let kalenderHTML = '';
+    kalenderPiece.forEach((piece) => {
+        kalenderHTML += `
 <div class="kalender-container">
 
-    <section class="event-and-date">
-        <h2>${piece.name}</h2>
-        <h3>Dato: ${piece.date}</h3>
+    <section class="event-name-date-time">
+        <h3>${piece.name}</h3>
+        <section class="event-time-and-date">
+            <h4>Dato: ${piece.date}</h4>
+            <h5>Sted: ${piece.place}</h5>
+        </section>
     </section>
 
     <section class="event-content">
@@ -71,7 +147,7 @@ kalenderPiece.forEach((piece) => {
 `});
 
 
-document.querySelector(".kalender-forEach").innerHTML = kalenderHTML;
+    document.querySelector(".kalender-forEach").innerHTML = kalenderHTML;
 
 
 </script>
@@ -79,79 +155,122 @@ document.querySelector(".kalender-forEach").innerHTML = kalenderHTML;
 
 
 <style>
-*{
-    margin: 0;
-    text-decoration: none;
-    font-family: Roboto;
-    color: var(--white)
-}
+    body{
+        margin: 0;
+        text-decoration: none;
+        font-family: Roboto;
+        color: var(--white)
+    }
 
-:root{
-    --primary-orange: #FF9900;
-    --secondary-orange: #FFAE00;
-    --primary-gray: #222222;
-    --secondary-gray: #333333;
-    --tertiary-grey: #555555;
-    --white: #f0f0f0;
-}
+    h1, h2, h3, h4, h5, h6, p{
+        color: var(--white);
+    }
 
-body{
-    padding: 0 2rem;
-}
+    :root{
+        --primary-orange: #FF9900;
+        --secondary-orange: #FFAE00;
+        --primary-gray: #222222;
+        --secondary-gray: #333333;
+        --tertiary-grey: #555555;
+        --white: #f0f0f0;
+    }
 
-.kalender-limiter{
-    overflow: scroll;
-    height: 400px;
-}
 
-.kalender-container{
-    margin: auto;
-    margin-bottom: 8px;
-    height: auto;
-    width: auto;
-    padding: 1rem;
-    background-color: var(--primary-gray);
-}
+    .kalender-limiter{
+        overflow-x: scroll;
+        height: 600px;
 
-.event-and-date{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 1rem;
-    letter-spacing: 2px;
-}
+    }
 
-.event-content{
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    margin-bottom: 1rem;
-    justify-content: space-between;
-}
+    .kalender-container{
+        margin: auto;
+        margin-bottom: 8px;
+        height: auto;
+        width: auto;
+        padding: 1rem;
+        background-color: var(--primary-gray);
 
-.event-image{
-    width: 8rem;
-}
+    }
 
-.event-recommendation{
-    font-size: 14px;
-}
+    .event-name-date-time{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        letter-spacing: 2px;
+        gap: 2rem;
+    }
 
-.event-button{
-    background-color: var(--primary-orange);
-    border-style: none;
-    padding: 0.8rem;
-    margin-right: 1rem;
-    font-size: 1rem;
-    display: flex;
-    transition: 0.2s;
-    color: var(--primary-gray)
-}
+    .event-time-and-date{
+    }
 
-.event-button:hover{
-    cursor: pointer;
-    transform: scale(1.2)
+    .event-time-and-date h4{
+        color: #FF9900;
+        font-style: italic;
+    }
 
-}
+    .event-content{
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .event-image{
+        width: 8rem;
+    }
+
+    .event-recommendation{
+        font-size: 14px;
+        color: var(--secondary-orange);
+    }
+
+    .event-button{
+        background-color: var(--primary-orange);
+        border-style: none;
+        padding: 1.2rem;
+        margin-top: 1rem;
+        margin-right: 1rem;
+        font-size: 1rem;
+        transition: 0.2s;
+        color: var(--primary-gray);
+        font-style: italic;
+        font-family: Roboto;
+        font-weight: bolder;
+        width: 8rem;
+        border-radius: 100rem;
+    ;
+    }
+    a{
+        text-decoration: none;
+    }
+
+    .event-button:hover{
+        cursor: pointer;
+        transform: scale(1.2)
+    }
+
+
+    @media screen and (min-width: 1120px){
+        .kalender-container{
+            width: 1000px;
+        }}
+    @media screen and (max-width: 480px){
+        .event-name-date-time{
+            display: block;
+
+        }
+        .event-content{
+            display: block;
+        }
+        .event-image{
+            padding: 0.5rem;
+            display: block;
+            margin: auto;
+        }
+        button{
+            display: block;
+            margin: 1rem auto;
+        }
+    }
 </style>
 </html>
